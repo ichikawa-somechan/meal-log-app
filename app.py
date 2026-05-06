@@ -30,8 +30,10 @@ if uploaded_file:
     
     if st.button(f"{user_choice}さんのデータとして解析・保存"):
         try:
-            # モデル設定（最新の安定版モデルを指定）
-            model = genai.GenerativeModel('gemini-2.5-flash')
+            # モデル判定
+            models = genai.list_models()
+            target = 'models/gemini-2.5-flash'
+            model = genai.GenerativeModel(target)
             
             prompt = "写真を分析し、最後に必ず『食材リスト：とんかつ,白米,味噌汁』のように全食材をカンマ区切りで1行書いてください。"
             
