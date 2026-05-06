@@ -1,5 +1,6 @@
 import sys
 import streamlit as st
+from streamlit_gsheets import GSheetsConnection
 import google.generativeai as genai
 import os
 import csv
