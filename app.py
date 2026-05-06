@@ -18,7 +18,7 @@ user_choice = st.sidebar.radio("撮影者を選択してください", ["自分"
 # APIキーとスプレッドシート接続の設定
 API_KEY = st.secrets["GEMINI_API_KEY"]
 genai.configure(api_key=API_KEY)
-conn = st.connectuin("gsheets", type=GSheetsConnection)
+conn = st.connection("gsheets", type=GSheetsConnection)
 
 uploaded_file = st.file_uploader("写真をアップロード", type=["jpg", "png"])
 
