@@ -1,5 +1,5 @@
 streamlit
 google-generativeai
 Pillow
-st-gsheets-conection
+st-gsheets-connection
 pandas
